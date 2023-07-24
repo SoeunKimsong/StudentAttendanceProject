@@ -34,6 +34,9 @@
             this.buttonRegister = new System.Windows.Forms.Button();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.labelName = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -41,16 +44,19 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(2, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(2, 4);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(83, 77);
+            this.pictureBox1.Size = new System.Drawing.Size(83, 74);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.buttonExit);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.buttonRegister);
             this.panel1.Controls.Add(this.buttonLogin);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -66,7 +72,7 @@
             this.buttonRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRegister.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonRegister.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonRegister.Location = new System.Drawing.Point(1058, 0);
+            this.buttonRegister.Location = new System.Drawing.Point(908, -1);
             this.buttonRegister.Name = "buttonRegister";
             this.buttonRegister.Size = new System.Drawing.Size(146, 78);
             this.buttonRegister.TabIndex = 5;
@@ -82,9 +88,9 @@
             this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonLogin.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonLogin.Location = new System.Drawing.Point(910, 0);
+            this.buttonLogin.Location = new System.Drawing.Point(750, -1);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(142, 78);
+            this.buttonLogin.Size = new System.Drawing.Size(153, 78);
             this.buttonLogin.TabIndex = 4;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -101,6 +107,51 @@
             this.labelName.Size = new System.Drawing.Size(581, 144);
             this.labelName.TabIndex = 5;
             this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(81, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(142, 78);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Login";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(229, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(155, 78);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Login";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonExit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonExit.Location = new System.Drawing.Point(1059, -1);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(142, 78);
+            this.buttonExit.TabIndex = 8;
+            this.buttonExit.Text = "Exit";
+            this.buttonExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonExit.UseVisualStyleBackColor = false;
             // 
             // Dashboard
             // 
@@ -128,5 +179,8 @@
         private System.Windows.Forms.Button buttonRegister;
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
