@@ -1,6 +1,6 @@
 ﻿namespace week12
 {
-    partial class Form1
+    partial class InsertStudent
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InsertStudent));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,7 +49,10 @@
             this.StudentID_textBox = new System.Windows.Forms.TextBox();
             this.Deletebutton = new System.Windows.Forms.Button();
             this.Updatebutton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -65,7 +69,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(200, 102);
+            this.label2.Location = new System.Drawing.Point(50, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(130, 22);
             this.label2.TabIndex = 1;
@@ -75,7 +79,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(203, 242);
+            this.label3.Location = new System.Drawing.Point(53, 226);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 22);
             this.label3.TabIndex = 2;
@@ -85,7 +89,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(218, 180);
+            this.label4.Location = new System.Drawing.Point(68, 164);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 22);
             this.label4.TabIndex = 3;
@@ -95,7 +99,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(269, 298);
+            this.label5.Location = new System.Drawing.Point(119, 282);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 22);
             this.label5.TabIndex = 4;
@@ -105,7 +109,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(623, 247);
+            this.label6.Location = new System.Drawing.Point(446, 223);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(138, 22);
             this.label6.TabIndex = 5;
@@ -115,7 +119,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(637, 180);
+            this.label7.Location = new System.Drawing.Point(460, 156);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(130, 22);
             this.label7.TabIndex = 6;
@@ -125,7 +129,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(637, 121);
+            this.label8.Location = new System.Drawing.Point(460, 97);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(124, 22);
             this.label8.TabIndex = 7;
@@ -133,7 +137,7 @@
             // 
             // StudentCodeTextBox
             // 
-            this.StudentCodeTextBox.Location = new System.Drawing.Point(336, 102);
+            this.StudentCodeTextBox.Location = new System.Drawing.Point(186, 86);
             this.StudentCodeTextBox.Multiline = true;
             this.StudentCodeTextBox.Name = "StudentCodeTextBox";
             this.StudentCodeTextBox.Size = new System.Drawing.Size(225, 33);
@@ -141,7 +145,7 @@
             // 
             // UsernameTextBox
             // 
-            this.UsernameTextBox.Location = new System.Drawing.Point(336, 169);
+            this.UsernameTextBox.Location = new System.Drawing.Point(186, 153);
             this.UsernameTextBox.Multiline = true;
             this.UsernameTextBox.Name = "UsernameTextBox";
             this.UsernameTextBox.Size = new System.Drawing.Size(225, 33);
@@ -149,7 +153,7 @@
             // 
             // GivennameTextBox
             // 
-            this.GivennameTextBox.Location = new System.Drawing.Point(336, 231);
+            this.GivennameTextBox.Location = new System.Drawing.Point(186, 215);
             this.GivennameTextBox.Multiline = true;
             this.GivennameTextBox.Name = "GivennameTextBox";
             this.GivennameTextBox.Size = new System.Drawing.Size(225, 33);
@@ -157,7 +161,7 @@
             // 
             // SexTextBox
             // 
-            this.SexTextBox.Location = new System.Drawing.Point(336, 287);
+            this.SexTextBox.Location = new System.Drawing.Point(186, 271);
             this.SexTextBox.Multiline = true;
             this.SexTextBox.Name = "SexTextBox";
             this.SexTextBox.Size = new System.Drawing.Size(225, 33);
@@ -165,7 +169,7 @@
             // 
             // DateTextbox
             // 
-            this.DateTextbox.Location = new System.Drawing.Point(779, 110);
+            this.DateTextbox.Location = new System.Drawing.Point(602, 86);
             this.DateTextbox.Multiline = true;
             this.DateTextbox.Name = "DateTextbox";
             this.DateTextbox.Size = new System.Drawing.Size(225, 33);
@@ -173,7 +177,7 @@
             // 
             // PlaceTextBox
             // 
-            this.PlaceTextBox.Location = new System.Drawing.Point(779, 169);
+            this.PlaceTextBox.Location = new System.Drawing.Point(602, 145);
             this.PlaceTextBox.Multiline = true;
             this.PlaceTextBox.Name = "PlaceTextBox";
             this.PlaceTextBox.Size = new System.Drawing.Size(225, 33);
@@ -181,7 +185,7 @@
             // 
             // PhoneTextBox
             // 
-            this.PhoneTextBox.Location = new System.Drawing.Point(779, 236);
+            this.PhoneTextBox.Location = new System.Drawing.Point(602, 212);
             this.PhoneTextBox.Multiline = true;
             this.PhoneTextBox.Name = "PhoneTextBox";
             this.PhoneTextBox.Size = new System.Drawing.Size(225, 33);
@@ -191,7 +195,7 @@
             // 
             this.Savebutton.BackColor = System.Drawing.SystemColors.Highlight;
             this.Savebutton.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Savebutton.Location = new System.Drawing.Point(171, 340);
+            this.Savebutton.Location = new System.Drawing.Point(21, 324);
             this.Savebutton.Name = "Savebutton";
             this.Savebutton.Size = new System.Drawing.Size(195, 47);
             this.Savebutton.TabIndex = 15;
@@ -212,17 +216,18 @@
             // 
             // StudentID_textBox
             // 
-            this.StudentID_textBox.Location = new System.Drawing.Point(779, 298);
+            this.StudentID_textBox.Location = new System.Drawing.Point(602, 274);
             this.StudentID_textBox.Multiline = true;
             this.StudentID_textBox.Name = "StudentID_textBox";
             this.StudentID_textBox.Size = new System.Drawing.Size(94, 33);
             this.StudentID_textBox.TabIndex = 17;
+            this.StudentID_textBox.Visible = false;
             // 
             // Deletebutton
             // 
             this.Deletebutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Deletebutton.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Deletebutton.Location = new System.Drawing.Point(408, 340);
+            this.Deletebutton.Location = new System.Drawing.Point(258, 324);
             this.Deletebutton.Name = "Deletebutton";
             this.Deletebutton.Size = new System.Drawing.Size(207, 47);
             this.Deletebutton.TabIndex = 18;
@@ -234,7 +239,7 @@
             // 
             this.Updatebutton.BackColor = System.Drawing.Color.Blue;
             this.Updatebutton.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Updatebutton.Location = new System.Drawing.Point(684, 340);
+            this.Updatebutton.Location = new System.Drawing.Point(516, 324);
             this.Updatebutton.Name = "Updatebutton";
             this.Updatebutton.Size = new System.Drawing.Size(207, 47);
             this.Updatebutton.TabIndex = 19;
@@ -242,11 +247,34 @@
             this.Updatebutton.UseVisualStyleBackColor = false;
             this.Updatebutton.Click += new System.EventHandler(this.Updatebutton_Click);
             // 
-            // Form1
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(934, 65);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(163, 183);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Blue;
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(855, 274);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(291, 47);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Scan Fingerprint";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // InsertStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1083, 672);
+            this.ClientSize = new System.Drawing.Size(1201, 754);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Updatebutton);
             this.Controls.Add(this.Deletebutton);
             this.Controls.Add(this.StudentID_textBox);
@@ -267,10 +295,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "InsertStudent";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,6 +327,8 @@
         private System.Windows.Forms.TextBox StudentID_textBox;
         private System.Windows.Forms.Button Deletebutton;
         private System.Windows.Forms.Button Updatebutton;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

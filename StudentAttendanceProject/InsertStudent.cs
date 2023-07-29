@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace week12
 {
-    public partial class Form1 : Form
+    public partial class InsertStudent : Form
     {
         SqlConnection conn = new SqlConnection("Data Source=LAPTOP-LG44BGTQ\\SQLEXPRESS;Initial Catalog=BOB;Integrated Security=True");
-        public Form1()
+        public InsertStudent()
         {
             InitializeComponent();
         }

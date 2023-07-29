@@ -43,8 +43,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -82,9 +82,9 @@
             this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonLogin.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonLogin.Location = new System.Drawing.Point(12, 534);
+            this.buttonLogin.Location = new System.Drawing.Point(43, 497);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(98, 34);
+            this.buttonLogin.Size = new System.Drawing.Size(140, 41);
             this.buttonLogin.TabIndex = 4;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -98,9 +98,9 @@
             this.buttonRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRegister.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonRegister.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonRegister.Location = new System.Drawing.Point(125, 534);
+            this.buttonRegister.Location = new System.Drawing.Point(43, 556);
             this.buttonRegister.Name = "buttonRegister";
-            this.buttonRegister.Size = new System.Drawing.Size(88, 34);
+            this.buttonRegister.Size = new System.Drawing.Size(140, 40);
             this.buttonRegister.TabIndex = 5;
             this.buttonRegister.Text = "Register";
             this.buttonRegister.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -235,22 +235,10 @@
             this.panel2.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Location = new System.Drawing.Point(225, 63);
+            this.panel2.Location = new System.Drawing.Point(224, 1);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(978, 83);
             this.panel2.TabIndex = 7;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Kh Battambang", 9F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(-5, 11);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 46);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Welcome:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label7
             // 
@@ -263,6 +251,18 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "Role:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Kh Battambang", 9F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(-5, 11);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(114, 46);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Welcome:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // button1
             // 
