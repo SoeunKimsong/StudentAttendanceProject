@@ -22,14 +22,12 @@ namespace StudentAttendanceProject
         {
             LoginForm form = new LoginForm();
             form.ShowDialog();
-            labelName.Text = USERNAME;
         }
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
             RegisterForm form = new RegisterForm();
             form.ShowDialog();
-            labelName.Text = USERNAME;
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
@@ -44,6 +42,11 @@ namespace StudentAttendanceProject
             {
                 MessageBox.Show("Connection fail!", "Connection");
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
