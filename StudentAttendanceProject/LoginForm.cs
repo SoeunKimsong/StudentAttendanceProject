@@ -39,8 +39,10 @@ namespace StudentAttendanceProject
                     if (dt.Rows.Count <= 1)
                     {
                         MessageBox.Show("Login success!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Dashboard.USERNAME = textBoxUsername.Text;
+                        WelcomeForm.USERNAME = textBoxUsername.Text;
                         this.Close();
+                        Dashboard form = new Dashboard();
+                        form.ShowDialog();
                     }
                     else
                     {

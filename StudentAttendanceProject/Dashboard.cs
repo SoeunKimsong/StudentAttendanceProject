@@ -12,7 +12,6 @@ namespace StudentAttendanceProject
 {
     public partial class Dashboard : Form
     {
-        public static string USERNAME = "";
         public Dashboard()
         {
             InitializeComponent();
@@ -32,21 +31,8 @@ namespace StudentAttendanceProject
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            clsGlobal.cn.ConnectionString = "Data Source=LAPTOP-KDGV02MO\\SQLEXPRESS;Initial Catalog=AttendanceStudent;Integrated Security=True";
-            try
-            {
-                clsGlobal.cn.Open();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Connection fail!", "Connection");
-            }
+            labelName.Text = WelcomeForm.USERNAME;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            
-        }
     }
 }
