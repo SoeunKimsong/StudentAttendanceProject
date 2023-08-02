@@ -52,7 +52,7 @@ namespace StudentAttendanceProject
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Successfully Register New Account!", "Register", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    Dashboard.USERNAME = textBoxUsername.Text;
+                    WelcomeForm.USERNAME = textBoxUsername.Text;
                     this.Close();
                 }
                 catch (Exception ex)
