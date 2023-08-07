@@ -1,9 +1,7 @@
-﻿using StudentAttendanceProject;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -11,40 +9,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace week12
+namespace StudentAttendanceProject
 {
-    public partial class InsertStudent : Form
+    public partial class InsertTeacher : Form
     {
-        DataTable roomdt = new DataTable();
-        public InsertStudent()
+        public InsertTeacher()
         {
             InitializeComponent();
-
-            SqlCommand roomcmd = new SqlCommand("SELECT * FROM tblRoom", cn);
-            SqlDataAdapter roomadapter = new SqlDataAdapter(roomcmd);
-            roomadapter.Fill(roomdt);
-            comboBoxRoom.DataSource = null;
-            comboBoxRoom.Items.Clear();
-            comboBoxRoom.DataSource = roomdt;
-            comboBoxRoom.DisplayMember = "RoomName";
-            comboBoxRoom.ValueMember = "RoomID";
         }
+
         SqlConnection cn = clsGlobal.cn;
 
         private bool isFirstLoad = true;
-
-        private void Form1_Load(object sender, EventArgs e)
+        private void InsertTeacher_Load(object sender, EventArgs e)
         {
             try
             {
-                SqlCommand cmd = new SqlCommand("SELECT dbo.tblStudent.StudentID, dbo.tblStudent.FirstName," +
-                    " dbo.tblStudent.LastName, dbo.tblStudent.Sex, dbo.tblStudent.DOB, dbo.tblStudent.POB," +
-                    " dbo.tblStudent.Address, dbo.tblStudent.Phone, dbo.tblStudent.Email, dbo.tblStudent.Photo," +
-                    " dbo.tblRoom.RoomName FROM dbo.tblRoom INNER JOIN dbo.tblStudent ON dbo.tblRoom.RoomID = dbo.tblStudent.RoomID", cn);
+                SqlCommand cmd = new SqlCommand("SELECT * From tblTeacher", cn);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 dataGridView1.DataSource = dt;
+
 
             }
             catch (SqlException er)
@@ -53,12 +39,10 @@ namespace week12
             }
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             isFirstLoad = false;
-
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Savebutton_Click(object sender, EventArgs e)
         {
-
             string Email = this.textBoxEmail.Text;
             string Firstname = this.textboxFirstname.Text;
             string Lastname = this.textboxLastname.Text;
@@ -67,18 +51,17 @@ namespace week12
             string POB = this.PlaceTextBox.Text;
             string Phone = this.PhoneTextBox.Text;
             string Address = this.textBoxAddress.Text;
-            string RoomID = this.comboBoxRoom.SelectedValue.ToString();
 
             try
             {
-                string query = "Insert into tblStudent(Email,Firstname,Lastname,Sex,DOB,POB,Phone,Address,RoomID)" +
-                    "values('" + Email + "','" + Firstname + "','" + Lastname + "','" + Sex + "','" + DOB + "','" + POB + "','" + Phone + "','" + Address + "','" + RoomID + "')";
+                string query = "Insert into tblTeacher(Email,Firstname,Lastname,Sex,DOB,POB,Phone,Address)" +
+                    "values('" + Email + "','" + Firstname + "','" + Lastname + "','" + Sex + "','" + DOB + "','" + POB + "','" + Phone + "','" + Address + "')";
                 SqlCommand cmd = new SqlCommand(query, cn);
                 try
                 {
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Record insert has successfuly");
-                    Form1_Load(null, null);
+                    InsertTeacher_Load(null, null);
                     emptyTextbox();
                 }
                 catch (SqlException err)
@@ -90,7 +73,6 @@ namespace week12
             {
                 MessageBox.Show(er.ToString());
             }
-            
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
@@ -106,18 +88,7 @@ namespace week12
                 textBoxAddress.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
                 PhoneTextBox.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
                 textBoxEmail.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
-
-                string roomname = dataGridView1.CurrentRow.Cells[10].Value.ToString();
-                for(int i = 0; i < roomdt.Rows.Count; i++)
-                {
-                    if (roomdt.Rows[i].Field<string>("RoomName") == roomname)
-                    {
-                        comboBoxRoom.SelectedValue = roomdt.Rows[i].Field<int>("RoomID");
-                    }
-                }
             }
-
-
         }
 
         private void emptyTextbox()
@@ -136,14 +107,14 @@ namespace week12
         {
             try
             {
-                string query = "Delete from tblStudent where StudentID = " + Int16.Parse(this.StudentID_textBox.Text);
+                string query = "Delete from tblTeacher where TeacherID = " + Int16.Parse(this.StudentID_textBox.Text);
 
                 SqlCommand cmd = new SqlCommand(query, cn);
                 try
                 {
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Record deleted has successfuly");
-                    Form1_Load(null, null);
+                    InsertTeacher_Load(null, null);
                 }
                 catch (SqlException err)
                 {
@@ -158,7 +129,7 @@ namespace week12
 
         private void Updatebutton_Click(object sender, EventArgs e)
         {
-            int StudentID = Int16.Parse(this.StudentID_textBox.Text);
+            int TeacherID = Int16.Parse(this.StudentID_textBox.Text);
             string Email = this.textBoxEmail.Text;
             string Firstname = this.textboxFirstname.Text;
             string Lastname = this.textboxLastname.Text;
@@ -167,16 +138,16 @@ namespace week12
             string POB = this.PlaceTextBox.Text;
             string Phone = this.PhoneTextBox.Text;
             string Address = this.textBoxAddress.Text;
-            string RoomID = this.comboBoxRoom.SelectedValue.ToString();
+
             try
             {
-                string query = "Update tblStudent set Email='" + Email + "',Firstname='" + Firstname + "',Lastname='" + Lastname + "',Sex='" + Sex + "',DOB='" + DOB + "',POB='" + POB + "',Phone='" + Phone + "',Address='" + Address + "',RoomID='" + RoomID + "' where StudentID=" + StudentID + "";
+                string query = "Update tblTeacher set Email='" + Email + "',Firstname='" + Firstname + "',Lastname='" + Lastname + "',Sex='" + Sex + "',DOB='" + DOB + "',POB='" + POB + "',Phone='" + Phone + "',Address='" + Address + "' where TeacherID=" + TeacherID + "";
                 SqlCommand cmd = new SqlCommand(query, cn);
                 try
                 {
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Record Update has successfuly");
-                    Form1_Load(null, null);
+                    InsertTeacher_Load(null, null);
                 }
                 catch (SqlException err)
                 {
@@ -195,4 +166,3 @@ namespace week12
         }
     }
 }
-

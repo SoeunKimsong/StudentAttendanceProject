@@ -104,7 +104,7 @@
             this.textBoxConfPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxConfPassword.Location = new System.Drawing.Point(277, 325);
             this.textBoxConfPassword.Name = "textBoxConfPassword";
-            this.textBoxConfPassword.PasswordChar = '!';
+            this.textBoxConfPassword.PasswordChar = '*';
             this.textBoxConfPassword.Size = new System.Drawing.Size(244, 27);
             this.textBoxConfPassword.TabIndex = 12;
             // 
@@ -133,7 +133,7 @@
             this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPassword.Location = new System.Drawing.Point(277, 266);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.PasswordChar = '!';
+            this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(244, 27);
             this.textBoxPassword.TabIndex = 10;
             // 

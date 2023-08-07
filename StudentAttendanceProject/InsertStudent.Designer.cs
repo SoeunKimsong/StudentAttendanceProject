@@ -30,17 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InsertStudent));
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.StudentCodeTextBox = new System.Windows.Forms.TextBox();
-            this.UsernameTextBox = new System.Windows.Forms.TextBox();
-            this.GivennameTextBox = new System.Windows.Forms.TextBox();
-            this.SexTextBox = new System.Windows.Forms.TextBox();
+            this.textboxFirstname = new System.Windows.Forms.TextBox();
+            this.textboxLastname = new System.Windows.Forms.TextBox();
             this.DateTextbox = new System.Windows.Forms.TextBox();
             this.PlaceTextBox = new System.Windows.Forms.TextBox();
             this.PhoneTextBox = new System.Windows.Forms.TextBox();
@@ -51,6 +48,14 @@
             this.Updatebutton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBoxRoom = new System.Windows.Forms.ComboBox();
+            this.comboBoxSex = new System.Windows.Forms.ComboBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxAddress = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -65,41 +70,31 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Add Student Form";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(50, 86);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 22);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Student Code : ";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(53, 226);
+            this.label3.Location = new System.Drawing.Point(74, 159);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 22);
+            this.label3.Size = new System.Drawing.Size(99, 22);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Given name :";
+            this.label3.Text = "Lastname :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(68, 164);
+            this.label4.Location = new System.Drawing.Point(74, 97);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 22);
+            this.label4.Size = new System.Drawing.Size(102, 22);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Username :";
+            this.label4.Text = "Firstname :";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(119, 282);
+            this.label5.Location = new System.Drawing.Point(125, 215);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 22);
             this.label5.TabIndex = 4;
@@ -135,37 +130,21 @@
             this.label8.TabIndex = 7;
             this.label8.Text = "Date of birth :";
             // 
-            // StudentCodeTextBox
+            // textboxFirstname
             // 
-            this.StudentCodeTextBox.Location = new System.Drawing.Point(186, 86);
-            this.StudentCodeTextBox.Multiline = true;
-            this.StudentCodeTextBox.Name = "StudentCodeTextBox";
-            this.StudentCodeTextBox.Size = new System.Drawing.Size(225, 33);
-            this.StudentCodeTextBox.TabIndex = 8;
+            this.textboxFirstname.Location = new System.Drawing.Point(192, 86);
+            this.textboxFirstname.Multiline = true;
+            this.textboxFirstname.Name = "textboxFirstname";
+            this.textboxFirstname.Size = new System.Drawing.Size(225, 33);
+            this.textboxFirstname.TabIndex = 9;
             // 
-            // UsernameTextBox
+            // textboxLastname
             // 
-            this.UsernameTextBox.Location = new System.Drawing.Point(186, 153);
-            this.UsernameTextBox.Multiline = true;
-            this.UsernameTextBox.Name = "UsernameTextBox";
-            this.UsernameTextBox.Size = new System.Drawing.Size(225, 33);
-            this.UsernameTextBox.TabIndex = 9;
-            // 
-            // GivennameTextBox
-            // 
-            this.GivennameTextBox.Location = new System.Drawing.Point(186, 215);
-            this.GivennameTextBox.Multiline = true;
-            this.GivennameTextBox.Name = "GivennameTextBox";
-            this.GivennameTextBox.Size = new System.Drawing.Size(225, 33);
-            this.GivennameTextBox.TabIndex = 10;
-            // 
-            // SexTextBox
-            // 
-            this.SexTextBox.Location = new System.Drawing.Point(186, 271);
-            this.SexTextBox.Multiline = true;
-            this.SexTextBox.Name = "SexTextBox";
-            this.SexTextBox.Size = new System.Drawing.Size(225, 33);
-            this.SexTextBox.TabIndex = 11;
+            this.textboxLastname.Location = new System.Drawing.Point(192, 148);
+            this.textboxLastname.Multiline = true;
+            this.textboxLastname.Name = "textboxLastname";
+            this.textboxLastname.Size = new System.Drawing.Size(225, 33);
+            this.textboxLastname.TabIndex = 10;
             // 
             // DateTextbox
             // 
@@ -195,7 +174,7 @@
             // 
             this.Savebutton.BackColor = System.Drawing.SystemColors.Highlight;
             this.Savebutton.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Savebutton.Location = new System.Drawing.Point(21, 324);
+            this.Savebutton.Location = new System.Drawing.Point(455, 327);
             this.Savebutton.Name = "Savebutton";
             this.Savebutton.Size = new System.Drawing.Size(195, 47);
             this.Savebutton.TabIndex = 15;
@@ -206,17 +185,20 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.Location = new System.Drawing.Point(12, 393);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.ShowEditingIcon = false;
             this.dataGridView1.Size = new System.Drawing.Size(1156, 339);
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // StudentID_textBox
             // 
-            this.StudentID_textBox.Location = new System.Drawing.Point(602, 274);
+            this.StudentID_textBox.Location = new System.Drawing.Point(706, 19);
             this.StudentID_textBox.Multiline = true;
             this.StudentID_textBox.Name = "StudentID_textBox";
             this.StudentID_textBox.Size = new System.Drawing.Size(94, 33);
@@ -227,7 +209,7 @@
             // 
             this.Deletebutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Deletebutton.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Deletebutton.Location = new System.Drawing.Point(258, 324);
+            this.Deletebutton.Location = new System.Drawing.Point(692, 327);
             this.Deletebutton.Name = "Deletebutton";
             this.Deletebutton.Size = new System.Drawing.Size(207, 47);
             this.Deletebutton.TabIndex = 18;
@@ -239,7 +221,7 @@
             // 
             this.Updatebutton.BackColor = System.Drawing.Color.Blue;
             this.Updatebutton.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Updatebutton.Location = new System.Drawing.Point(516, 324);
+            this.Updatebutton.Location = new System.Drawing.Point(950, 327);
             this.Updatebutton.Name = "Updatebutton";
             this.Updatebutton.Size = new System.Drawing.Size(207, 47);
             this.Updatebutton.TabIndex = 19;
@@ -250,7 +232,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(934, 65);
+            this.pictureBox1.Location = new System.Drawing.Point(950, 62);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(163, 183);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -261,18 +243,104 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Blue;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(855, 274);
+            this.button1.Location = new System.Drawing.Point(877, 259);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(291, 47);
             this.button1.TabIndex = 21;
             this.button1.Text = "Scan Fingerprint";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(517, 282);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(67, 22);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Room :";
+            // 
+            // comboBoxRoom
+            // 
+            this.comboBoxRoom.FormattingEnabled = true;
+            this.comboBoxRoom.Location = new System.Drawing.Point(602, 279);
+            this.comboBoxRoom.Name = "comboBoxRoom";
+            this.comboBoxRoom.Size = new System.Drawing.Size(225, 24);
+            this.comboBoxRoom.TabIndex = 23;
+            // 
+            // comboBoxSex
+            // 
+            this.comboBoxSex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSex.FormattingEnabled = true;
+            this.comboBoxSex.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.comboBoxSex.Location = new System.Drawing.Point(192, 207);
+            this.comboBoxSex.Name = "comboBoxSex";
+            this.comboBoxSex.Size = new System.Drawing.Size(225, 33);
+            this.comboBoxSex.TabIndex = 24;
+            // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Location = new System.Drawing.Point(192, 271);
+            this.textBoxEmail.Multiline = true;
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(225, 33);
+            this.textBoxEmail.TabIndex = 26;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(104, 274);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 22);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Email :";
+            // 
+            // textBoxAddress
+            // 
+            this.textBoxAddress.Location = new System.Drawing.Point(194, 324);
+            this.textBoxAddress.Multiline = true;
+            this.textBoxAddress.Name = "textBoxAddress";
+            this.textBoxAddress.Size = new System.Drawing.Size(225, 33);
+            this.textBoxAddress.TabIndex = 28;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(106, 327);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(84, 22);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "Address :";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(96, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(195, 47);
+            this.button2.TabIndex = 29;
+            this.button2.Text = "Clear";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // InsertStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1201, 754);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.textBoxAddress);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.textBoxEmail);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBoxSex);
+            this.Controls.Add(this.comboBoxRoom);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Updatebutton);
@@ -283,17 +351,14 @@
             this.Controls.Add(this.PhoneTextBox);
             this.Controls.Add(this.PlaceTextBox);
             this.Controls.Add(this.DateTextbox);
-            this.Controls.Add(this.SexTextBox);
-            this.Controls.Add(this.GivennameTextBox);
-            this.Controls.Add(this.UsernameTextBox);
-            this.Controls.Add(this.StudentCodeTextBox);
+            this.Controls.Add(this.textboxLastname);
+            this.Controls.Add(this.textboxFirstname);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "InsertStudent";
             this.Text = "Form1";
@@ -308,17 +373,14 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox StudentCodeTextBox;
-        private System.Windows.Forms.TextBox UsernameTextBox;
-        private System.Windows.Forms.TextBox GivennameTextBox;
-        private System.Windows.Forms.TextBox SexTextBox;
+        private System.Windows.Forms.TextBox textboxFirstname;
+        private System.Windows.Forms.TextBox textboxLastname;
         private System.Windows.Forms.TextBox DateTextbox;
         private System.Windows.Forms.TextBox PlaceTextBox;
         private System.Windows.Forms.TextBox PhoneTextBox;
@@ -329,6 +391,14 @@
         private System.Windows.Forms.Button Updatebutton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboBoxRoom;
+        private System.Windows.Forms.ComboBox comboBoxSex;
+        private System.Windows.Forms.TextBox textBoxEmail;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxAddress;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button2;
     }
 }
 

@@ -28,8 +28,8 @@ namespace StudentAttendanceProject
             else
             {
                 SqlDataAdapter da = new SqlDataAdapter(@"Select * From tblAdmin
-                                                    Where [username] = @UserName 
-	                                              and [password] = @Password", clsGlobal.cn);
+                                                    Where [username] = @userName 
+	                                              and [password] = @password", clsGlobal.cn);
                 DataTable dt = new DataTable();
                 da.SelectCommand.Parameters.AddWithValue("@username", textBoxUsername.Text);
                 da.SelectCommand.Parameters.AddWithValue("@password", textBoxPassword.Text);
@@ -38,9 +38,9 @@ namespace StudentAttendanceProject
                     da.Fill(dt);
                     if (dt.Rows.Count <= 1)
                     {
+                        this.Close();
                         MessageBox.Show("Login success!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         WelcomeForm.USERNAME = textBoxUsername.Text;
-                        this.Close();
                         Dashboard form = new Dashboard();
                         form.ShowDialog();
                     }
