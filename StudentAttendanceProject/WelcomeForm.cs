@@ -38,5 +38,16 @@ namespace StudentAttendanceProject
                 MessageBox.Show("Connection fail!", "Connection");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ViewTodayAttendance form = new ViewTodayAttendance();
+            form.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -46,18 +46,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AttendanceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceReport.Designer.cs">
+      <DependentUpon>AttendanceReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="clsGlobal.cs" />
+    <Compile Include="CreateAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateAttendance.Designer.cs">
+      <DependentUpon>CreateAttendance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="InsertAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertAttendance.Designer.cs">
+      <DependentUpon>InsertAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertRoom.Designer.cs">
+      <DependentUpon>InsertRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="InsertStudent.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InsertStudent.Designer.cs">
       <DependentUpon>InsertStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertTeacher.Designer.cs">
+      <DependentUpon>InsertTeacher.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -73,17 +103,98 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScanFingerprint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScanFingerprint.Designer.cs">
+      <DependentUpon>ScanFingerprint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scanning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanning.Designer.cs">
+      <DependentUpon>Scanning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateAttendance.Designer.cs">
+      <DependentUpon>UpdateAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAttendance.Designer.cs">
+      <DependentUpon>ViewAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewRoom.Designer.cs">
+      <DependentUpon>ViewRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewStudent.Designer.cs">
+      <DependentUpon>ViewStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewStudentAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewStudentAttendance.Designer.cs">
+      <DependentUpon>ViewStudentAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewStudentInRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewStudentInRoom.Designer.cs">
+      <DependentUpon>ViewStudentInRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewTeacher.Designer.cs">
+      <DependentUpon>ViewTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTodayAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewTodayAttendance.Designer.cs">
+      <DependentUpon>ViewTodayAttendance.cs</DependentUpon>
+    </Compile>
     <Compile Include="WelcomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WelcomeForm.Designer.cs">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AttendanceReport.resx">
+      <DependentUpon>AttendanceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateAttendance.resx">
+      <DependentUpon>CreateAttendance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InsertAttendance.resx">
+      <DependentUpon>InsertAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertRoom.resx">
+      <DependentUpon>InsertRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InsertStudent.resx">
       <DependentUpon>InsertStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertTeacher.resx">
+      <DependentUpon>InsertTeacher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -99,6 +210,39 @@
     </Compile>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScanFingerprint.resx">
+      <DependentUpon>ScanFingerprint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scanning.resx">
+      <DependentUpon>Scanning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateAttendance.resx">
+      <DependentUpon>UpdateAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAttendance.resx">
+      <DependentUpon>ViewAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewRoom.resx">
+      <DependentUpon>ViewRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewStudent.resx">
+      <DependentUpon>ViewStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewStudentAttendance.resx">
+      <DependentUpon>ViewStudentAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewStudentInRoom.resx">
+      <DependentUpon>ViewStudentInRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewTeacher.resx">
+      <DependentUpon>ViewTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewTodayAttendance.resx">
+      <DependentUpon>ViewTodayAttendance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomeForm.resx">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
