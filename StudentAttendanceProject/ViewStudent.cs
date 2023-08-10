@@ -84,5 +84,15 @@ namespace StudentAttendanceProject
                 MessageBox.Show(er.ToString());
             }
         }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

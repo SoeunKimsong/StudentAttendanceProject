@@ -44,5 +44,10 @@ namespace StudentAttendanceProject
             ViewTodayAttendance form = new ViewTodayAttendance();
             form.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

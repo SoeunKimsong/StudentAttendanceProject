@@ -132,5 +132,10 @@ namespace StudentAttendanceProject
                 textboxRoomname.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

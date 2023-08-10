@@ -77,5 +77,19 @@ namespace StudentAttendanceProject
                 MessageBox.Show(er.ToString());
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ViewStudentInRoom.RoomID = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            ViewStudentInRoom.RoomName = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+
+            ViewStudentInRoom form = new ViewStudentInRoom();
+            form.ShowDialog();
+        }
     }
 }

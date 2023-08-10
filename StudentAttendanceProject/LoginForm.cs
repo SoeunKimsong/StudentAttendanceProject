@@ -36,7 +36,7 @@ namespace StudentAttendanceProject
                 try
                 {
                     da.Fill(dt);
-                    if (dt.Rows.Count <= 1)
+                    if (dt.Rows.Count >= 1)
                     {
                         this.Close();
                         MessageBox.Show("Login success!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -56,5 +56,11 @@ namespace StudentAttendanceProject
             }
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

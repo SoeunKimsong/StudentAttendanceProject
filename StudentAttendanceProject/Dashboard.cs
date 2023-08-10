@@ -75,5 +75,17 @@ namespace StudentAttendanceProject
             ViewAttendance form = new ViewAttendance();
             form.ShowDialog();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            InsertAttendance form = new InsertAttendance();
+            form.ShowDialog();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Report form = new Report();
+            form.ShowDialog();
+        }
     }
 }

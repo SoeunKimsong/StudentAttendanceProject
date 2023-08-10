@@ -31,8 +31,6 @@ namespace week12
         }
         SqlConnection cn = clsGlobal.cn;
 
-        private bool isFirstLoad = true;
-
         private void Form1_Load(object sender, EventArgs e)
         {
             try
@@ -40,19 +38,18 @@ namespace week12
                 SqlCommand cmd = new SqlCommand("SELECT dbo.tblStudent.StudentID, dbo.tblStudent.FirstName," +
                     " dbo.tblStudent.LastName, dbo.tblStudent.Sex, dbo.tblStudent.DOB, dbo.tblStudent.POB," +
                     " dbo.tblStudent.Address, dbo.tblStudent.Phone, dbo.tblStudent.Email, dbo.tblStudent.Photo," +
-                    " dbo.tblRoom.RoomName FROM dbo.tblRoom INNER JOIN dbo.tblStudent ON dbo.tblRoom.RoomID = dbo.tblStudent.RoomID", cn);
+                    " dbo.tblRoom.RoomName FROM dbo.tblStudent INNER JOIN dbo.tblRoom ON dbo.tblRoom.RoomID = dbo.tblStudent.RoomID" +
+                    " Order by dbo.tblStudent.StudentID Desc", cn);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 dataGridView1.DataSource = dt;
-
             }
             catch (SqlException er)
             {
                 MessageBox.Show(er.ToString());
             }
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            isFirstLoad = false;
 
         }
 
@@ -95,29 +92,6 @@ namespace week12
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            if (!isFirstLoad)
-            {
-                StudentID_textBox.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                textboxFirstname.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                textboxLastname.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                comboBoxSex.SelectedItem = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                DateTextbox.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-                PlaceTextBox.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-                textBoxAddress.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-                PhoneTextBox.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-                textBoxEmail.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
-
-                string roomname = dataGridView1.CurrentRow.Cells[10].Value.ToString();
-                for(int i = 0; i < roomdt.Rows.Count; i++)
-                {
-                    if (roomdt.Rows[i].Field<string>("RoomName") == roomname)
-                    {
-                        comboBoxRoom.SelectedValue = roomdt.Rows[i].Field<int>("RoomID");
-                    }
-                }
-            }
-
-
         }
 
         private void emptyTextbox()
@@ -144,6 +118,7 @@ namespace week12
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Record deleted has successfuly");
                     Form1_Load(null, null);
+                    emptyTextbox();
                 }
                 catch (SqlException err)
                 {
@@ -177,6 +152,7 @@ namespace week12
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Record Update has successfuly");
                     Form1_Load(null, null);
+                    emptyTextbox();
                 }
                 catch (SqlException err)
                 {
@@ -189,9 +165,32 @@ namespace week12
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+        private void button3_Click(object sender, EventArgs e)
         {
-            emptyTextbox();
+            this.Close();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            StudentID_textBox.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            textboxFirstname.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            textboxLastname.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            comboBoxSex.SelectedItem = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            DateTextbox.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            PlaceTextBox.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            textBoxAddress.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            PhoneTextBox.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+            textBoxEmail.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+
+            string roomname = dataGridView1.CurrentRow.Cells[10].Value.ToString();
+            for (int i = 0; i < roomdt.Rows.Count; i++)
+            {
+                if (roomdt.Rows[i].Field<string>("RoomName") == roomname)
+                {
+                    comboBoxRoom.SelectedValue = roomdt.Rows[i].Field<int>("RoomID");
+                }
+            }
         }
     }
 }

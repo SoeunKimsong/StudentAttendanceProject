@@ -51,5 +51,10 @@ namespace StudentAttendanceProject
             }
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
